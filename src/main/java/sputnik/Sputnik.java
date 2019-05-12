@@ -4,17 +4,17 @@ import java.util.Objects;
 
 public class Sputnik {
     private String name;
-    private String designator;
+    private String intlDesignator;
     private int apogee;
     private int perigee;
-    private int inclination;
+    private double inclination;
     private double altitude;
     private double velocity;
     private double period;
 
-    public Sputnik(String name, String designator, int apogee, int perigee, int inclination, double altitude, double velocity, double period) {
+    public Sputnik(String name, String intlDesignator, int apogee, int perigee, double inclination, double altitude, double velocity, double period) {
         this.name = name;
-        this.designator = designator;
+        this.intlDesignator = intlDesignator;
         this.apogee = apogee;
         this.perigee = perigee;
         this.inclination = inclination;
@@ -31,12 +31,12 @@ public class Sputnik {
         this.name = name;
     }
 
-    public String getDesignator() {
-        return designator;
+    public String getintlDesignator() {
+        return intlDesignator;
     }
 
-    public void setDesignator(String designator) {
-        this.designator = designator;
+    public void setintlDesignator(String intlDesignator) {
+        this.intlDesignator = intlDesignator;
     }
 
     public int getApogee() {
@@ -55,7 +55,7 @@ public class Sputnik {
         this.perigee = perigee;
     }
 
-    public int getInclination() {
+    public double getInclination() {
         return inclination;
     }
 
@@ -99,11 +99,11 @@ public class Sputnik {
                 Double.compare(sputnik.velocity, velocity) == 0 &&
                 Double.compare(sputnik.period, period) == 0 &&
                 name.equals(sputnik.name) &&
-                designator.equals(sputnik.designator);
+                intlDesignator.equals(sputnik.intlDesignator);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, designator, apogee, perigee, inclination, altitude, velocity, period);
+        return Objects.hash(name, intlDesignator, apogee, perigee, inclination, altitude, velocity, period);
     }
 }
