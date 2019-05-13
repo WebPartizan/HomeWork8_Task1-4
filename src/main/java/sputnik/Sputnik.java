@@ -106,4 +106,14 @@ public class Sputnik {
     public int hashCode() {
         return Objects.hash(name, intlDesignator, apogee, perigee, inclination, altitude, velocity, period);
     }
+
+    @Override
+    public String toString() {
+        return "Sputnik{" +
+                "intlDesignator='" + intlDesignator + '\'' +
+                ", apogee=" + apogee +
+                ", perigee=" + perigee +
+                ", velocity=" + velocity +
+                '}';
+    }
 }
