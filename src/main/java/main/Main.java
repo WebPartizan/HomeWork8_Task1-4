@@ -32,16 +32,35 @@ public class Main {
                 11474, 94, 54.97, 10965.20, 3.63, 222.27));
 
         //Task #1
+        System.out.println("Task #1");
         for (Sputnik i : sputniki) {
             System.out.println("Sputnik - " + i.getName() + ", orbit  - " + i.getAltitude() + " km");
         }
 
         //Task #2
+        System.out.println("Task #2");
         Iterator<Sputnik> iterSputniki = sputniki.iterator();
         while (iterSputniki.hasNext()) {
             Sputnik sputnik = iterSputniki.next();
             System.out.println(sputnik);
         }
 
+        //Task #3
+        System.out.println("Task #3");
+        List<String> name = new ArrayList<>();
+        for(int i = 0; i < sputniki.size(); i++){
+            name.add(sputniki.get(i).getName());
+        }
+        for (String i : name) {
+            System.out.println(i);
+        }
+
+        List<Double> velocities = new ArrayList<>();
+        for(int i = 0; i < sputniki.size(); i++){
+            velocities.add(sputniki.get(i).getVelocity());
+        }
+        for (Double i : velocities) {
+            System.out.println(i);
+        }
     }
 }
