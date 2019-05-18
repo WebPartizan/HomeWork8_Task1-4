@@ -62,5 +62,18 @@ public class Main {
         for (Double i : velocities) {
             System.out.println(i);
         }
+
+        Sputnik newSputnik = new Sputnik("ARIANE 5 R/B","2018-012C", 42543, 252,
+                21.44, 3816.03, 8.03, 767.54);
+
+        if (name.contains(newSputnik.getName())){
+            System.out.println("Данный спутник уже есть в списке!");
+        } else {
+            System.out.println("Данный спутник не входит в список!");
+        }
+
+        //Task #4
+        System.out.println("Task #4");
+
     }
 }
