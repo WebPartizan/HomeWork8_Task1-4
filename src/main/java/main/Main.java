@@ -3,6 +3,7 @@ package main;
 import sputnik.Sputnik;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Iterator;
 
@@ -74,6 +75,22 @@ public class Main {
 
         //Task #4
         System.out.println("Task #4");
+
+        LinkedList <String> lds = new LinkedList<>();
+        for(int a = 0; a < sputniki.size(); a++){
+            lds.add(sputniki.get(a).getintlDesignator());
+        }
+
+        System.out.println("Первый элемент - " + lds.getFirst());
+        System.out.println("Последний элемент - " + lds.getLast());
+        lds.pollLast();
+        System.out.println("Список после удаления последнего элемента");
+        for (String a : lds) {
+            System.out.println(a);
+        }
+
+        //Task #5
+        System.out.println("Task #5");
 
     }
 }
