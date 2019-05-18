@@ -89,8 +89,5 @@ public class Main {
             System.out.println(a);
         }
 
-        //Task #5
-        System.out.println("Task #5");
-
     }
 }
